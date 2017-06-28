@@ -4,7 +4,13 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { WorkOrderPage } from '../pages/work-order/work-order';
+import { OperationsPage } from '../pages/operations/operations';
+import { AllWorksOrderPage } from '../pages/all-works-order/all-works-order';
+import { KhbxPage } from '../pages/all-works-order/khbx/khbx';
+import { RcjxPage } from '../pages/all-works-order/rcjx/rcjx';
+import { YfxwhPage } from '../pages/all-works-order/yfxwh/yfxwh';
+import { BjydPage } from '../pages/all-works-order/bjyd/bjyd';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,17 +19,38 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    WorkOrderPage,
+    OperationsPage,
+    AllWorksOrderPage,
+    KhbxPage,
+    RcjxPage,
+    YfxwhPage,
+    BjydPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{
+      tabsHideOnSubPages: 'true' ,
+      iconMode: 'ios',
+      mode: 'ios',
+      modalEnter: 'modal-slide-in',
+      modalLeave: 'modal-slide-out',
+   	  backButtonText: '',
+    	  tabsPlacement: 'bottom',  
+      pageTransition: 'ios'  
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    WorkOrderPage,
+    OperationsPage,
+    AllWorksOrderPage,
+    KhbxPage,
+    RcjxPage,
+    YfxwhPage,
+    BjydPage
   ],
   providers: [
     StatusBar,
