@@ -24,8 +24,8 @@ export class HomePage {
         alert.present(); 
   }
   //工单提醒
-  WorkOrderPage(){
-  	this.navCtrl.push(WorkOrderPage,{});
+  WorkOrderPage(alertTitle:string){
+  	this.navCtrl.push(WorkOrderPage,{title:alertTitle});
   }
   //运维管理
   OperationsPage(){

@@ -18,21 +18,21 @@
 	<div class="home-tab">我的消息</div>
 	<ion-grid class="home-grid">
 	  <ion-row>
-	    <ion-col col-4 (click)="WorkOrderPage()">
+	    <ion-col col-4 (click)="WorkOrderPage('设备异常报警')">
 	    		<div class="home-grid-list">
 	    			<ion-badge color="danger" *ngIf="notices.sb>0">{{notices.sb}}</ion-badge>
 	    			<img src="assets/info.png" />
 	    		</div>
 	    		<p>设备异常报警</p>
 	    </ion-col>
-	    <ion-col col-4 (click)="WorkOrderPage()">
+	    <ion-col col-4 (click)="WorkOrderPage('工单提醒')">
 	    		<div class="home-grid-list">
 	    			<ion-badge color="danger" *ngIf="notices.gd>0">{{notices.gd}}</ion-badge>
 	    			<img src="assets/workOrder.png" />
 	    		</div>
 	    		<p>工单提醒</p>
 	    </ion-col>
-	    <ion-col col-4 (click)="WorkOrderPage()">
+	    <ion-col col-4 (click)="WorkOrderPage('通知')">
 	    		<div class="home-grid-list">
 	    			<ion-badge color="danger" *ngIf="notices.tz>0">{{notices.tz}}</ion-badge>
 	    			<img src="assets/notice.png" />
@@ -62,7 +62,7 @@
 	    <ion-col col-4 (click)="WorkOrderPage()">
 	    		<div class="home-grid-list">
 	    			<ion-badge color="danger" *ngIf="notices.kg>0">{{notices.kj}}</ion-badge>
-	    			<img src="assets/box.png.png" />
+	    			<img src="assets/box.png" />
 	    		</div>
 	    		<p>空间管理</p>
 	    </ion-col>

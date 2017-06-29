@@ -7,8 +7,9 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class WorkOrderPage {
   public items = [];
+	private title:string = "";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  	
+  	this.title = navParams.get("title");
   }
   ionViewDidLoad() {
    	this.items = this.getItems();//获取工单提醒列表
