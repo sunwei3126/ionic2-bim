@@ -4,13 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { WorkOrderPage } from '../pages/work-order/work-order';
-import { OperationsPage } from '../pages/operations/operations';
-import { AllWorksOrderPage } from '../pages/all-works-order/all-works-order';
-import { KhbxPage } from '../pages/all-works-order/khbx/khbx';
-import { RcjxPage } from '../pages/all-works-order/rcjx/rcjx';
-import { YfxwhPage } from '../pages/all-works-order/yfxwh/yfxwh';
-import { BjydPage } from '../pages/all-works-order/bjyd/bjyd';
 
 @Component({
   templateUrl: 'app.html'

@@ -13,7 +13,7 @@
 	  <!--<ion-list-header align="center">
 		   <div>{{item.time}}</div>
 	  </ion-list-header>-->
-	  <ion-item *ngFor="let item of items">
+	  <ion-item *ngFor="let item of items" (click)="OrderInfoPage(item.id)">
 	    <ion-avatar item-start>
 	      <img src="assets/{{item.img}}">
 	    </ion-avatar>

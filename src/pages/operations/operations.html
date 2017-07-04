@@ -7,7 +7,7 @@
    	  </ion-buttons>
       <ion-title>运维管理</ion-title>
       <ion-buttons end>
-      <button ion-button clear (click)="settings()">
+      <button ion-button clear (click)="CreatWorkOrderPage()">
       	创建工单
       </button>
     </ion-buttons>
@@ -29,7 +29,7 @@
 	      <ion-label>待处理工单</ion-label>
 	      <ion-note item-end (click)="AllWorksOrderPage()">查看所有工单</ion-note>
 	    </button>
-	  <ion-item *ngFor="let item of items">
+	  <ion-item *ngFor="let item of items" (click)="OrderInfoPage(item.id)">
 	    <ion-avatar item-start>
 	      <img src="assets/{{item.img}}">
 	    </ion-avatar>

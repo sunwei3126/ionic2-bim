@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,AlertController } from 'ionic-angular';
 import { AllWorksOrderPage } from '../all-works-order/all-works-order';
-
+import { CreatWorkOrderPage } from '../creat-work-order/creat-work-order';
+import { OrderInfoPage } from '../order-info/order-info';
 @Component({
   selector: 'page-operations',
   templateUrl: 'operations.html'
@@ -16,18 +17,21 @@ export class OperationsPage {
   }
   getItems(){
   	return [{
+  		id:"1",
   		time:"13年12月01日",
   		img:"head.png",
   		name:"问题类型",
   		tit:"设备地址1",
   		info:"问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述"
   	},{
+  		id:"2",
   		time:"13年12月02日",
   		img:"head.png",
   		name:"问题类型",
   		tit:"设备地址2",
   		info:"问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述"
   	},{
+  		id:"3",
   		time:"13年12月03日",
   		img:"head.png",
   		name:"问题类型",
@@ -76,5 +80,13 @@ export class OperationsPage {
   //查看所有工单
   AllWorksOrderPage(){
   	this.navCtrl.push(AllWorksOrderPage,{});
+  }
+  //创建工单
+  CreatWorkOrderPage(){
+  	this.navCtrl.push(CreatWorkOrderPage,{});
+  }
+  //订单详情
+  OrderInfoPage(id){
+  	this.navCtrl.push(OrderInfoPage,{id:id});
   }
 }

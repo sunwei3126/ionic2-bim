@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -11,6 +12,15 @@ import { KhbxPage } from '../pages/all-works-order/khbx/khbx';
 import { RcjxPage } from '../pages/all-works-order/rcjx/rcjx';
 import { YfxwhPage } from '../pages/all-works-order/yfxwh/yfxwh';
 import { BjydPage } from '../pages/all-works-order/bjyd/bjyd';
+import { CreatWorkOrderPage } from '../pages/creat-work-order/creat-work-order';
+import { LargeBuildingPage } from '../pages/creat-work-order/large-building/large-building';
+import { FloorPage } from '../pages/creat-work-order/floor/floor';
+import { RoomPage } from '../pages/creat-work-order/room/room';
+import { OrderInfoPage } from '../pages/order-info/order-info';
+import { MaintenanceDetailsPage } from '../pages/maintenance-details/maintenance-details';
+import { LoginPage } from '../pages/login/login';
+import { SettingPage } from '../pages/setting/setting';
+import { UrlPage } from '../pages/url/url';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,7 +35,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     KhbxPage,
     RcjxPage,
     YfxwhPage,
-    BjydPage
+    BjydPage,
+    CreatWorkOrderPage,
+    LargeBuildingPage,
+    FloorPage,
+    RoomPage,
+    OrderInfoPage,
+    MaintenanceDetailsPage,
+    LoginPage,
+    SettingPage,
+    UrlPage
   ],
   imports: [
     BrowserModule,
@@ -39,6 +58,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     	  tabsPlacement: 'bottom',  
       pageTransition: 'ios'  
     }),
+    IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -50,7 +70,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     KhbxPage,
     RcjxPage,
     YfxwhPage,
-    BjydPage
+    BjydPage,
+    CreatWorkOrderPage,
+    LargeBuildingPage,
+    FloorPage,
+    RoomPage,
+    OrderInfoPage,
+    MaintenanceDetailsPage,
+    LoginPage,
+    SettingPage,
+    UrlPage
   ],
   providers: [
     StatusBar,

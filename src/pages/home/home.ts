@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController,AlertController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 import { WorkOrderPage } from '../work-order/work-order';
 import { OperationsPage } from '../operations/operations';
+import { LoginPage } from '../login/login';
+import { SettingPage } from '../setting/setting';
 
 @Component({
   selector: 'page-home',
@@ -9,11 +12,12 @@ import { OperationsPage } from '../operations/operations';
 })
 export class HomePage {
   public notices = {};
-  constructor(public navCtrl: NavController,public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController,public alertCtrl: AlertController,public storage: Storage) {
 
   }
   ionViewDidLoad() {
    	this.notices = this.getNotices();//获取首页提醒数量
+   	this.storage.set('loginType', false);//登录状态
   }
   settings(){
   	let alert = this.alertCtrl.create({ 
@@ -24,17 +28,24 @@ export class HomePage {
         alert.present(); 
   }
   //工单提醒
-<<<<<<< HEAD
   WorkOrderPage(){
   	this.navCtrl.push(WorkOrderPage,{});
-=======
-  WorkOrderPage(alertTitle:string){
-  	this.navCtrl.push(WorkOrderPage,{title:alertTitle});
->>>>>>> fdea7cc7df7528e40e127697a3376c4b96e04d40
   }
   //运维管理
   OperationsPage(){
   	this.navCtrl.push(OperationsPage,{});
+  }
+  //设置
+  SettingPage(){
+  	//判断账户是否登录
+  	let that = this;
+  	this.storage.get('loginType').then((loginType) => {
+  		if(loginType){//已登录
+			that.navCtrl.push(SettingPage,{});
+		}else{//未登录
+			that.navCtrl.push(LoginPage,{});
+		}
+	});
   }
   //首页提醒数量
   getNotices(){
